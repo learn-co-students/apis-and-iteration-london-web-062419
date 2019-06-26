@@ -16,8 +16,17 @@ class ApiCommunicator
     films_data = films.map { |data| JSON.parse(RestClient.get(data)) } # set a film data variable = to a map of the films iteration parsing the previous data iteration.
     films_data # return the film data hash.
     end
-   
-  
+   binding.pry
+   0
+
+#     Walkthrough solution 
+#  var = response_hash["results"].find {|character| character["name"] == character_name }
+# films_array= character["films"].map{|films| JSON.parse(RestClient.get(films))}
+
+
+
+
+
     # iterate over the response hash to find the collection of `films` for the given
     #   `character`
     # collect those film API urls, make a web request to each URL to get the info
